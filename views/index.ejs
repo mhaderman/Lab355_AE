@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<%- include("./includes/header.ejs", {title: title}); %>
+
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-  </body>
-</html>
+
+    <a href="/company/all">Companies - View All</a>
+    <p></p>
+    <a href="/account/all">Accounts - View All</a>
+    <p></p>
+    <a href="/address/all">Addresses - View All</a>
+    <p></p>
+    <a href="/school/all">Schools - View All</a>
+    <p></p>
+    <a href="/skills/all">Skills - View All</a>
+
+    <br />
+
+<%- include("./includes/footer.ejs"); %>

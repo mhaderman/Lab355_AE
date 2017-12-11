@@ -6,7 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var company = require('./routes/company_routes');
+var account = require('./routes/account_routes');
+var address = require('./routes/address_route');
+var school = require('./routes/school_routes');
+var skills = require('./routes/skills_route');
 
 var app = express();
 
@@ -20,10 +24,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/company', company);
+app.use('/account', account);
+app.use('/address', address);
+app.use('/school', school);
+app.use('/skills', skills);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
