@@ -12,6 +12,7 @@
             <% account.forEach((res) => { %>
             <tr class='active'>
                 <td><a href='/account/all/<%=res.account_id %>'><%= res.email %></a></td>
+                <td><button onclick="event.preventDefault();window.location.href='/account/edit4/?account_id=<%=res.account_id %>'">Edit</button></td>
                 <td><a href='/account/delete/<%=res.account_id %>'>Delete</a></td>
             </tr>
             <% }); %>
@@ -75,8 +76,5 @@
     </div>
 </div>
 
-<p></p>
-<a href="/">Home</a>
-<p></p>
 
 <%- include("../includes/footer.ejs"); %>

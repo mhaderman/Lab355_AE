@@ -153,10 +153,10 @@ exports.update = function(params, callback) {
  */
 
 exports.edit = function(company_id, callback) {
-    var query = 'CALL company_getinfo(?)';
-    var queryData = [company_id];
+        var query = 'CALL company_getinfo(?)';
+        var queryData = [company_id];
 
-    connection.query(query, queryData, function(err, result) {
-        callback(err, result);
-    });
+        connection.query(query, queryData, function(err, result) {
+            callback(err, result);
+        });
 };

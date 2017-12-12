@@ -1,4 +1,4 @@
-<%- include("../includes/header.ejs", {title:"Current Skills"}); %>
+<%- include("includes/header.ejs", {title:"Current Skills"}); %>
 
   <div class='container'>
       <div class='table-responsive'>
@@ -27,6 +27,7 @@
 
 <div class='container'>
     <div class='jumbotron'>
+        <h1>Insert</h1>
         <form action='/skills/insert' method='POST'>
             <div class='form-group'>
                 <label> skill_name </label>
@@ -43,6 +44,7 @@
 
 <div class='container'>
     <div class='jumbotron'>
+        <h1>Update</h1>
         <form action='/skills/insert/item' method='POST'>
             <div class='form-group'>
                 <label> skill_name </label>
@@ -56,8 +58,5 @@
         </form>
     </div>
 </div>
-<p></p>
-<a href="/">Home</a>
-<p></p>
 
-<%- include("../includes/footer.ejs"); %>
+<%- include("includes/footer.ejs"); %>
