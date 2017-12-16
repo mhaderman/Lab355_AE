@@ -11,6 +11,6 @@ exports.insert = (item, data) => {
     connection.query(myquery, data, (err, result) => {
         console.log(`${err} ${result}`);
     err ? reject(err) : resolve(result);
-});
-})
+        });
+    })
 }

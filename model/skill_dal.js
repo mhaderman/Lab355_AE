@@ -13,6 +13,15 @@ exports.getAll = () => {
   })
 }
 
+exports.getAllC = function(callback) {
+
+    var query = 'SELECT * FROM skill;';
+
+    connection.query(query, function(err, result) {
+        callback(err, result);
+    });
+};
+
 exports.update = ({ skill_name, skill_id }) => {
     console.log(`${skill_name}  ${skill_id}`)
     return new Promise((resolve, reject) => {

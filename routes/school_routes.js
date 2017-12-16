@@ -29,4 +29,10 @@ router.post('/edit', (req, res) => {
   .catch(err => res.send(err));
 });
 
+router.post('/add', (req, res) => {
+    inserts.insert('school', req.body.update)
+        .then(setTimeout(() => res.redirect('/school/all'), 200))
+        .catch(err => res.send(err));
+});
+
 module.exports = router;

@@ -1,0 +1,36 @@
+<%- include("../includes/header.ejs", {title:"Accounts - " + result[0].email}); %>
+
+<h1>Accounts</h1>
+<ul>
+    <li>First Name: <%= result[0].first_name %></li>
+    <li>Last Name: <%= result[0].last_name %></li>
+    <li>Email: <%= result[0].email %></li>
+    <li>School(es):
+        <ul>
+            <% for(var i=0; result.length > i; i++ ) { %>
+            <li><%= result[i].school_name %></li>
+            <% } %>
+        </ul>
+    </li>
+    <li>Companies:
+        <ul>
+            <% for(var l=0; result.length > l; l++ ) { %>
+            <li><%= result[l].company_name %></li>
+            <% } %>
+        </ul>
+    </li>
+    <li>Skills:
+        <ul>
+            <% for(var l=0; result.length > l; l++ ) { %>
+            <li><%= result[l].skill_name %></li>
+            <% } %>
+        </ul>
+    </li>
+</ul>
+
+<a href="/account/all"><< back</a>
+
+
+
+
+<%- include("../includes/footer.ejs"); %>

@@ -13,6 +13,15 @@ exports.getAll = () => {
   })
 }
 
+exports.getAllC = function(callback) {
+
+    var query = 'SELECT * FROM school;';
+
+    connection.query(query, function(err, result) {
+        callback(err, result);
+    });
+};
+
 exports.edit = ({school_name, address_id}) => {
   return new Promise((resolve, reject) => {
     let myquery = `update school set school_name=${connection.escape(school_name)} where addres_id=${connection.escape(address_id)}`;
